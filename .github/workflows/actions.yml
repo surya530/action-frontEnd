@@ -1,0 +1,31 @@
+name: ui-actions
+
+on:
+    push:
+        branch:
+            - "main"
+            - "master"
+    pull_request:
+        branch:
+            - "main"
+            - "master"
+
+jobs:
+    testing:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: step1
+              uses: actions/checkout@v2
+            - name: step2
+              uses: actions/setup-node@v2
+              with:
+                node-version: 18.0
+            - name: install deps
+              run: npm ci
+            - name: create build
+              run: npm run build
+            - name: print number
+              run: |
+                 echo 20
+                 echo 40+20
