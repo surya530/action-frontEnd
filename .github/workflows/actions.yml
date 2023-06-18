@@ -20,7 +20,7 @@ jobs:
             - name: step2
               uses: actions/setup-node@v2
               with:
-                node-version: 18.0
+                node-version: 16.10
             - name: install deps
               run: npm ci
             - name: create build
