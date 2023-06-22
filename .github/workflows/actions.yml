@@ -24,8 +24,8 @@ jobs:
                 node-version: 16.10
             - name: install deps
               run: npm ci
-            - name: create build
-              run: npm run build
+            # - name: create build
+            #   run: npm run build
             - name: print number
               run: |
                  echo 20
