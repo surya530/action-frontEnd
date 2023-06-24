@@ -32,7 +32,7 @@ jobs:
               #       sudo rm -r build
               #       cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd
             - name: move build to backend server
-              run: cp build/ /home/ubuntu/backend/backend/newactions/newactions 
+              run: cp -r build/ /home/ubuntu/backend/backend/newactions/newactions 
             - name: print number
               run: |
                  echo 20
