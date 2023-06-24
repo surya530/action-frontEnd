@@ -31,6 +31,7 @@ jobs:
               #       cd /home/ubuntu/backend/backend/newactions/newactions
               #       sudo rm -r build
               #       cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd
+              #testing
             - name: move build to backend server
               run: cp -r build/ /home/ubuntu/backend/backend/newactions/newactions 
             - name: print number
