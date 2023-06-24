@@ -22,10 +22,17 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: 16.10
-            - name: install deps
-              run: npm ci
-            - name: create build
-              run: npm run build
+            # - name: install deps
+            #   run: npm ci
+            # - name: create build
+            #   run: npm run build
+            # - name: remove build in backend server
+            #   run: |
+            #       cd /home/ubuntu/backend/backend/newactions/newactions
+            #       sudo rm -r build
+            #       cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd
+            # - name: move build to backend server
+            #   run: cp build /home/ubuntu/backend/backend/newactions/newactions 
             - name: print number
               run: |
                  echo 20
