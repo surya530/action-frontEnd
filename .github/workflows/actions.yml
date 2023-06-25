@@ -26,6 +26,8 @@ jobs:
               run: npm ci
             - name: create build
               run: npm run build
+            - name : move
+              run : cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd/.github/workflows
             - name: shell script
               run: bash ./s.sh
             # - name: remove build in backend server
