@@ -26,18 +26,15 @@ jobs:
               run: npm ci
             - name: create build
               run: npm run build
-            - name : move
-              run : cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd/.github/workflows
-            - name: shell script
-              run: bash ./s.sh
-            # - name: remove build in backend server
-              # run: |
-              #       cd /home/ubuntu/backend/backend/newactions/newactions
-              #       sudo rm -r build
-              #       cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd
-              #testing
-            - name: move build to backend server
-              run: cp -r build/ /home/ubuntu/backend/backend/newactions/newactions 
+            - name: remove build in backend server
+              run: |
+                    cd /home/ubuntu/backend/backend/newactions/newactions
+                    find build/ && sudo rm -r build ||  
+                    cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd ; cp build/ /home/ubuntu/backend/backend/newactions/newactions
+                # sudo rm -r build
+                # cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd
+            # - name: move build to backend server
+            #   run: cp -r build/ /home/ubuntu/backend/backend/newactions/newactions 
             - name: print number
               run: |
                  echo 20
