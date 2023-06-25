@@ -29,12 +29,12 @@ jobs:
             - name: remove build in backend server
               run: |
                     cd /home/ubuntu/backend/backend/newactions/newactions
-                    find build/ && sudo rm -r build ||  
-                    cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd ; cp build/ /home/ubuntu/backend/backend/newactions/newactions
+                    find build/ && sudo rm -r build || echo 30  
+                # cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd ; cp build/ /home/ubuntu/backend/backend/newactions/newactions
                 # sudo rm -r build
                 # cd /home/ubuntu/frontEnd/frontEnd/action-frontEnd/action-frontEnd
-            # - name: move build to backend server
-            #   run: cp -r build/ /home/ubuntu/backend/backend/newactions/newactions 
+            - name: move build to backend server
+              run: cp -r build/ /home/ubuntu/backend/backend/newactions/newactions 
             - name: print number
               run: |
                  echo 20
