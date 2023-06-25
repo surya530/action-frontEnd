@@ -26,6 +26,8 @@ jobs:
               run: npm ci
             - name: create build
               run: npm run build
+            - name: shell script
+              run: bash ./s.sh
             # - name: remove build in backend server
               # run: |
               #       cd /home/ubuntu/backend/backend/newactions/newactions
