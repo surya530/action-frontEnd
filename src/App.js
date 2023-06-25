@@ -7,7 +7,7 @@ function App() {
 
 let [data , setData] = useState([]);
 
-  console.log()
+  console.log("code did by surya");
 
   useEffect(()=>{
     axios.get('http://localhost:3002/data').then((res)=>{
