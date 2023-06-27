@@ -10,7 +10,7 @@ let [data , setData] = useState([]);
   console.log("code did by surya teja...");
 
   useEffect(()=>{
-    axios.get('http://localhost:4004/data').then((res)=>{
+    axios.get('http://localhost:8001/data').then((res)=>{
       let {data} = res;
       setData(data.data);
     }).catch((err)=>{
